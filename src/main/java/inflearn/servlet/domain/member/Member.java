@@ -1,4 +1,4 @@
-package inflearn.servlet.domain;
+package inflearn.servlet.domain.member;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

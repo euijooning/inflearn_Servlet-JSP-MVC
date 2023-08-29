@@ -1,6 +1,6 @@
 package inflearn.servlet.web.servlet;
 
-import inflearn.servlet.domain.MemberRepository;
+import inflearn.servlet.domain.member.MemberRepository;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
