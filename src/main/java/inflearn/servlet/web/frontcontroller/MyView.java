@@ -22,12 +22,15 @@ public class MyView {
   }
 
   public void render(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    modelToRequestAttribute(model, request);
+    modelToRequestAttribute(model, request); // 모델에 있는 데이터를 requestAttribute로 바꾼다.
+
+    // modelToRequestAttribute가 다 끝나고 여기 오면 jsp가 getAttribute해서 값을 쓰겠죠.
     RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
     dispatcher.forward(request, response);
   }
 
   private void modelToRequestAttribute(Map<String, Object> model, HttpServletRequest request) {
-    model.forEach((key, value) -> request.setAttribute(key, value));
+    model.forEach((key, value) -> request.setAttribute(key, value)); // 랜더가 오면 다 돌면서 리퀘스트의 키, 밸류를 다 담아놓는다.(setAttribute)
+    // jsp는 여기서 값을 꺼내기 때문에 이 작업이 필요하다.
   }
 }
