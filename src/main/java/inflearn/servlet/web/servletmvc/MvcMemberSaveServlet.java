@@ -1,8 +1,8 @@
 package inflearn.servlet.web.servletmvc;
 
 
-import hello.servlet.domain.member.Member;
-import hello.servlet.domain.member.MemberRepository;
+import inflearn.servlet.domain.member.Member;
+import inflearn.servlet.domain.member.MemberRepository;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
